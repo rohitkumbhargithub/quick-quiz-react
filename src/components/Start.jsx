@@ -9,14 +9,17 @@ export default function Start({ setUsername }) {
 
   return (
     <div className="start">
+      <h1 className="logo">FlashQuiz</h1>
+      <form >
       <input
         className="startInput"
-        placeholder="enter your name"
+        placeholder="Enter your name" required
         ref={inputRef}
       />
       <button className="startButton" onClick={handleClick}>
         Start
       </button>
+      </form>
     </div>
   );
 }
