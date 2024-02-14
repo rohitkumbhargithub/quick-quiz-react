@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import '../App.css';
 
 export default function Start({ setUsername }) {
   const inputRef = useRef();
@@ -19,6 +20,14 @@ export default function Start({ setUsername }) {
       <button className="startButton" onClick={handleClick}>
         Start
       </button>
+
+        <small className="tip">
+          <ul>
+          Instruction
+            <li>Each question have a point 10.</li>
+            <li>Each question have timer 30sec.</li>
+          </ul>
+        </small>
       </form>
     </div>
   );

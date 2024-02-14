@@ -8,244 +8,244 @@ function App() {
   const [username, setUsername] = useState(null);
   const [timeOut, setTimeOut] = useState(false);
   const [questionNumber, setQuestionNumber] = useState(1);
-  const [earned, setEarned] = useState("$ 0");
+  const [points, setPoints] = useState('0');
 
   const data = [
     {
       id: 1,
-      question: "Rolex is a company that specializes in what type of product?",
+      question: "Which of the following software could assist someone who cannot use their hands for computer input?",
       answers: [
         {
-          text: "Phone",
+          text: "Video conferencing ",
           correct: false,
         },
         {
-          text: "Watches",
+          text: "Speech recognition ",
           correct: true,
         },
         {
-          text: "Food",
+          text: "Audio digitizer ",
           correct: false,
         },
         {
-          text: "Cosmetic",
+          text: "Synthesizer ",
           correct: false,
         },
       ],
     },
     {
       id: 2,
-      question: "When did the website `Facebook` launch?",
+      question: "__________ is the process of finding errors in software code ?",
       answers: [
         {
-          text: "2004",
+          text: "Debugging",
           correct: true,
         },
         {
-          text: "2005",
+          text: "Hacking",
           correct: false,
         },
         {
-          text: "2006",
+          text: "Compiling",
           correct: false,
         },
         {
-          text: "2007",
+          text: "Testing",
           correct: false,
         },
       ],
     },
     {
       id: 3,
-      question: "Who played the character of harry potter in movie?",
+      question: "A series of instructions that tells a computer what to do and how to do it is called a ________ ?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "program",
+          correct: true
+        },
+        {
+          text: "processor",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "user response",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "command",
           correct: false,
-        },
-        {
-          text: "Daniel Red Cliff",
-          correct: true,
         },
       ],
     },
     {
       id: 4,
-      question: "Who played the character of harry potter in movie?",
+      question: "A __________ shares hardware, software, and data among authorized users?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "transmitter",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "hyperlink",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "protocol",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "network",
           correct: true,
         },
       ],
     },
     {
       id: 5,
-      question: "Who played the character of harry potter in movie?",
+      question: "The basic computer processing cycle consists of _______ ?",
       answers: [
         {
-          text: "Johnny Deep",
-          correct: false,
-        },
-        {
-          text: "Leonardo Di Caprio",
-          correct: false,
-        },
-        {
-          text: "Denzel Washington",
-          correct: false,
-        },
-        {
-          text: "Daniel Red Cliff",
+          text: "input, processing and output",
           correct: true,
+        },
+        {
+          text: "hardware, software and storage",
+          correct: false,
+        },
+        {
+          text: "systems and application",
+          correct: false,
+        },
+        {
+          text: "data, information and applications",
+          correct: false,
         },
       ],
     },
     {
       id: 6,
-      question: "Who played the character of harry potter in movie?",
+      question: "_____ is the process of carrying out commands?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "Fetching",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "Storing",
           correct: false,
         },
         {
-          text: "Denzel Washington",
-          correct: false,
-        },
-        {
-          text: "Daniel Red Cliff",
+          text: "Executing",
           correct: true,
+        },
+        {
+          text: "Decoding",
+          correct: false,
         },
       ],
     },
     {
       id: 7,
-      question: "Who played the character of harry potter in movie?",
+      question: "This can be another word for program?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "hardware",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "floppy",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "disk",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "software",
           correct: true,
         },
       ],
     },
     {
       id: 8,
-      question: "Who played the character of harry potter in movie?",
+      question: "For seeing the output, you use ?",
       answers: [
         {
-          text: "Johnny Deep",
-          correct: false,
-        },
-        {
-          text: "Leonardo Di Caprio",
-          correct: false,
-        },
-        {
-          text: "Denzel Washington",
-          correct: false,
-        },
-        {
-          text: "Daniel Red Cliff",
+          text: "Monitor ",
           correct: true,
+        },
+        {
+          text: "Keyboard ",
+          correct: false,
+        },
+        {
+          text: "Mouse ",
+          correct: false,
+        },
+        {
+          text: "Scanner",
+          correct: false,
         },
       ],
     },
     {
       id: 9,
-      question: "Who played the character of harry potter in movie?",
+      question: "	Computer language used on the Internet is —— ?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "BASIC ",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "COBOL",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "Pascal",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "Java ",
           correct: true,
         },
       ],
     },
     {
       id: 10,
-      question: "Who played the character of harry potter in movie?",
+      question: "The ––– tells the computer how to use its components ?",
       answers: [
         {
-          text: "Johnny Deep",
+          text: "utility ",
           correct: false,
         },
         {
-          text: "Leonardo Di Caprio",
+          text: "network ",
           correct: false,
         },
         {
-          text: "Denzel Washington",
+          text: "application program",
           correct: false,
         },
         {
-          text: "Daniel Red Cliff",
+          text: "operating system",
           correct: true,
         },
       ],
     },
   ];
 
-  const moneyPyramid = useMemo(
+  const pointPyramid = useMemo(
     () =>
       [
-        { id: 1, amount: "10" },
-        { id: 2, amount: "20" },
-        { id: 3, amount: "30" },
-        { id: 4, amount: "40" },
-        { id: 5, amount: "50" },
-        { id: 6, amount: "60" },
-        { id: 7, amount: "70" },
-        { id: 8, amount: "80" },
-        { id: 9, amount: "90" },
-        { id: 10, amount: "100" },
+        { id: 1, point: "10" },
+        { id: 2, point: "20" },
+        { id: 3, point: "30" },
+        { id: 4, point: "40" },
+        { id: 5, point: "50" },
+        { id: 6, point: "60" },
+        { id: 7, point: "70" },
+        { id: 8, point: "80" },
+        { id: 9, point: "90" },
+        { id: 10, point: "100" },
       ],
     []
   );
@@ -256,8 +256,8 @@ function App() {
 
   useEffect(() => {
     questionNumber > 1 &&
-      setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
-  }, [questionNumber, moneyPyramid]);
+      setPoints(pointPyramid.find((m) => m.id === questionNumber - 1).point);
+  }, [questionNumber, pointPyramid]);
 
   return (
     <div className="app">
@@ -269,9 +269,9 @@ function App() {
              <h1>FlashQuiz</h1>
             {timeOut ? (
               <>
-              <h1 className="endText">Your score: {earned}
+              <h1 className="endText">Your score: {points}  
               <span>
-              <button className="againPlay" onClick={handleChange}>Play Again</button>
+              <button className="againPlay" onClick={handleChange}>Exit Quiz</button>
               </span>
               </h1>
               </>
@@ -298,16 +298,16 @@ function App() {
             )}
           </div>
           <div className="pyramid">
-            <ul className="moneyList">
-              {moneyPyramid.map((m) => (
+            <ul className="pointList">
+              {pointPyramid.map((m) => (
                 <li
                   className={
                     questionNumber === m.id
-                      ? "moneyListItem active"
-                      : "moneyListItem"
+                      ? "pointListItem active"
+                      : "pointListItem"
                   }
                 >
-                  <span className="moneyListItemNumber">{m.id}</span>
+                  <span className="pointsItemNumber">{m.id}</span>
                   
                 </li>
               ))}
